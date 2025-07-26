@@ -36,6 +36,9 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     // Get form values
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const service = document.getElementById('service').value;
+    const message = document.getElementById('message').value;
 
     // Show success message
     alert(`Obrigado, ${name}! Recebemos sua mensagem e entraremos em contato em breve no email ${email}.`);
