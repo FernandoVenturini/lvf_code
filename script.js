@@ -40,6 +40,14 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     const service = document.getElementById('service').value;
     const message = document.getElementById('message').value;
 
+    // Create mailto link
+    const subject = encodeURIComponent(`Contato do site - ${service}`);
+    const body = encodeURIComponent(`Nome: ${name}\nEmail: ${email}\nTelefone: ${phone}\nServiço: ${service}\n\nMensagem:\n${message}`);
+    const mailtoLink = `mailto:fernandoventurini9@hotmail.com?subject=${subject}&body=${body}`;
+
+    // Open email client
+    window.location.href = mailtoLink;
+
     // Show success message
     alert(`Obrigado, ${name}! Recebemos sua mensagem e entraremos em contato em breve no email ${email}.`);
 
